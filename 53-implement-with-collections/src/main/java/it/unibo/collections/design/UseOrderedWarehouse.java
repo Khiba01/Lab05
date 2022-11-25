@@ -1,5 +1,7 @@
 package it.unibo.collections.design;
 
+import it.unibo.collections.design.api.ComparableProduct;
+import it.unibo.collections.design.api.OrderedWarehouse;
 import it.unibo.collections.design.api.Product;
 import it.unibo.collections.design.api.Warehouse;
 
@@ -25,6 +27,7 @@ public final class UseOrderedWarehouse {
          * 4. First, solve the points in UseWarehouse, and ask the teacher for a correction.
          * Then continue with these exercises.
          */
+
         /*
          * 5. Implement a new class ComparableProduct implements Comparable<Product>
          */
@@ -35,10 +38,10 @@ public final class UseOrderedWarehouse {
         /*
          * 7. Fix the construction of objects and make sure that the test passes, before asking for a correction.
          */
-        final Product p1 = null; // new ComparableProduct("Apple", 100);
-        final Product p2 = null; // new ComparableProduct("Banana", 30);
-        final Product p3 = null; // new ComparableProduct("Watermelon", 10);
-        final Warehouse warehouse = null; // new OrderedWarehouse();
+        final Product p1 = new ComparableProduct("Apple", 100);
+        final Product p2 = new ComparableProduct("Banana", 30);
+        final Product p3 = new ComparableProduct("Watermelon", 10);
+        final Warehouse warehouse = new OrderedWarehouse();
         // Populate the warehouse
         warehouse.addProduct(p3);
         assertContentEqualsInOrder(List.of(p3), warehouse.allProducts());
